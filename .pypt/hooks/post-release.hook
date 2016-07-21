@@ -16,10 +16,6 @@ cd ~/git/aur-pkgbuilds
 cd "$PROJECTLC"
 commitaur "$PROJECT v$version"
 
-cd "$PROJECTLC"-git
-sed "s/pkgver=.*/pkgver=$gitver/" PKGBUILD -i
-commitaur "$PROJECT v$version"
-
 ./UPDATE-REQUIREMENTS.py
 git commit -asm "$PROJECT v$version"
 git push
