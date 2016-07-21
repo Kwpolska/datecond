@@ -9,6 +9,7 @@ Date Conditionals (datecond)
 
 .. index: README
 .. image:: https://travis-ci.org/Kwpolska/datecond.svg?branch=master
+   :target: https://travis-ci.org/Kwpolska/datecond
 
 PURPOSE
 -------
