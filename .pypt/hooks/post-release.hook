@@ -9,11 +9,11 @@ fi
 echo "Updating AUR packages..."
 gitver=$(git describe --long | sed -E 's/([^-]*-g)/r\1/;s/-/./g;s/^v//g')
 
-cp PKGBUILD ~/git/aur-pkgbuilds/$PROJECTLC/PKGBUILD
+cp PKGBUILD ~/git/aur-pkgbuilds/python-$PROJECTLC/PKGBUILD
 cd ~/git/aur-pkgbuilds
 . ~/git/aur-pkgbuilds/aur.zsh
 
-cd "$PROJECTLC"
+cd python-"$PROJECTLC"
 commitaur "$PROJECT v$version"
 
 ./UPDATE-REQUIREMENTS.py

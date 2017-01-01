@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # datecond test suite
-# Copyright © 2016, Chris Warrick.
+# Copyright © 2016-2017, Chris Warrick.
 # See /LICENSE for licensing information.
 
 
