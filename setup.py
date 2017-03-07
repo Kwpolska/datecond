@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='datecond',
-      version='0.1.5',
+      version='0.1.6',
       description='Parser for date range conditionals.',
       keywords='datecond',
       author='Chris Warrick',

@@ -6,7 +6,7 @@ Appendix C. Changelog
 :Copyright: © 2016-2017, Chris Warrick.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
 :Date: 2017-03-07
-:Version: 0.1.5
+:Version: 0.1.6
 
 .. index:: CHANGELOG
 
@@ -19,11 +19,14 @@ More information can be found on GitHub in the `releases section
 Version History
 ===============
 
-0.1.4
-    * Remove some stray documentation
+0.1.6
+    Fix version numbers in files
 
 0.1.5
     * Support 'now' as a comparison value
+
+0.1.4
+    * Remove some stray documentation
 
 0.1.3
     Moved to its own repo and published on PyPI.

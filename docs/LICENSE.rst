@@ -6,7 +6,7 @@ Appendix B. License for Date Conditionals
 :Copyright: © 2016-2017, Chris Warrick.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
 :Date: 2017-03-07
-:Version: 0.1.5
+:Version: 0.1.6
 
 .. index:: LICENSE
 
