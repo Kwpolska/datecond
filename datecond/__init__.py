@@ -36,6 +36,7 @@
 """Date range parser."""
 
 from __future__ import print_function, unicode_literals
+import datetime
 import dateutil.parser
 import re
 import operator
@@ -54,7 +55,7 @@ OPERATORS = {
 }
 
 
-def date_in_range(date_range, date, debug=True):
+def date_in_range(date_range, date, debug=False, now=None):
     """Check if date is in the range specified.
 
     Format:
@@ -63,7 +64,10 @@ def date_in_range(date_range, date, debug=True):
         * attribute: year, month, day, hour, month, second, weekday, isoweekday
           or empty for full datetime
         * comparison_operator: == != <= >= < >
-        * value: integer or dateutil-compatible date input
+        * value: integer, 'now' or dateutil-compatible date input
+
+    The optional `now` parameter can be used to provide a specific `now` value
+    (if none is provided, datetime.datetime.now() is used).
     """
     out = True
 
@@ -76,6 +80,9 @@ def date_in_range(date_range, date, debug=True):
         elif attribute:
             left = getattr(date, attribute)
             right = int(value)
+        elif value == 'now':
+            left = date
+            right = now or datetime.datetime.now()
         else:
             left = date
             right = dateutil.parser.parse(value)

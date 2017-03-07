@@ -4,8 +4,8 @@ Date Conditionals (datecond)
 :Info: This is the README file for Date Conditionals.
 :Author: Chris Warrick <chris@chriswarrick.com>
 :Copyright: © 2016-2017, Chris Warrick.
-:Date: 2016-07-21
-:Version: 0.1.4
+:Date: 2017-03-07
+:Version: 0.1.5
 
 .. index: README
 .. image:: https://travis-ci.org/Kwpolska/datecond.svg?branch=master
@@ -30,7 +30,7 @@ FORMAT
 * clause: attribute comparison_operator value (spaces optional)
     * attribute: year, month, day, hour, month, second, weekday, isoweekday or empty for full datetime
     * comparison_operator: == != <= >= < >
-    * value: integer or dateutil-compatible date input
+    * value: integer, 'now' or dateutil-compatible date input
 
 API
 ---
@@ -39,10 +39,11 @@ The library exposes only one function:
 
 ::
 
-   date_in_range(date_range, date, debug=True)
+   date_in_range(date_range, date, debug=True, now=None)
 
-Where ``date_range`` is the date conditional (see `FORMAT`_ above), and
-``date`` is a datetime object.
+Where ``date_range`` is the date conditional (see `FORMAT`_ above),
+``date`` is a datetime object, and ``now`` is the current date (used for 'now'
+comparisons; if not specified, ``datetime.datetime.now()`` is used)
 
 CLI USAGE
 ---------

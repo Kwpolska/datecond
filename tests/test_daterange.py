@@ -67,3 +67,9 @@ def test_weekday_isoweekday():
     pattern = "isoweekday != 1"
     assert date_in_range(pattern, datetime(2016, 7, 13))
     assert not date_in_range(pattern, datetime(2016, 7, 11))
+
+
+def test_now():
+    pattern = "< now"
+    assert date_in_range(pattern, datetime(2016, 7, 13), now=datetime(2016, 7, 14))
+    assert not date_in_range(pattern, datetime(2016, 7, 14), now=datetime(2016, 7, 14))
