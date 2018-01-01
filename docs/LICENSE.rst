@@ -3,14 +3,14 @@ Appendix B. License for Date Conditionals
 =======================================================
 :Info: This is the license for Date Conditionals.
 :Author: Chris Warrick <chris@chriswarrick.com>
-:Copyright: © 2016-2017, Chris Warrick.
+:Copyright: © 2016-2018, Chris Warrick.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
 :Date: 2017-03-07
 :Version: 0.1.6
 
 .. index:: LICENSE
 
-Copyright © 2016-2017, Chris Warrick.
+Copyright © 2016-2018, Chris Warrick.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

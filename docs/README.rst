@@ -3,7 +3,7 @@ Date Conditionals (datecond)
 ============================
 :Info: This is the README file for Date Conditionals.
 :Author: Chris Warrick <chris@chriswarrick.com>
-:Copyright: © 2016-2017, Chris Warrick.
+:Copyright: © 2016-2018, Chris Warrick.
 :Date: 2017-03-07
 :Version: 0.1.6
 
@@ -95,7 +95,7 @@ CLI USAGE
 COPYRIGHT
 ---------
 
-Copyright © 2015-2017, Chris Warrick.
+Copyright © 2015-2018, Chris Warrick.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
