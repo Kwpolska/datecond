@@ -7,7 +7,8 @@ python:
  - "3.6"
  - "3.7"
  - "3.8"
- - "pypy"
+ - "pypy2"
+ - "pypy3"
 
 install:
  - "pip install -U --upgrade-strategy eager pip setuptools wheel"
