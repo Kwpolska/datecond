@@ -1,5 +1,6 @@
 language: python
 sudo: false
+dist: bionic
 python:
  - "2.7"
  - "3.5"
@@ -9,8 +10,8 @@ python:
  - "pypy"
 
 install:
- - "pip install -U --update-strategy=eager pip setuptools wheel"
- - "pip install -U --update-strategy=eager -r requirements.txt"
+ - "pip install -U --upgrade-strategy eager pip setuptools wheel"
+ - "pip install -U --upgrade-strategy eager -r requirements.txt"
  - "pip install ."
 
 script:
