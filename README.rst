@@ -30,7 +30,7 @@ FORMAT
 * clause: attribute comparison_operator value (spaces optional)
     * attribute: year, month, day, hour, month, second, weekday, isoweekday or empty for full datetime
     * comparison_operator: == != <= >= < >
-    * value: integer, 'now' or dateutil-compatible date input
+    * value: integer, 'now', 'today', or dateutil-compatible date input
 
 API
 ---
@@ -42,8 +42,9 @@ The library exposes only one function:
    date_in_range(date_range, date, debug=True, now=None)
 
 Where ``date_range`` is the date conditional (see `FORMAT`_ above),
-``date`` is a datetime object, and ``now`` is the current date (used for 'now'
-comparisons; if not specified, ``datetime.datetime.now()`` is used)
+``date`` is a datetime object, and ``now`` is the current date (used for
+'now'/'today' comparisons; if not specified, ``datetime.datetime.now()`` or
+``datetime.date.today()`` is used)
 
 CLI USAGE
 ---------
@@ -95,7 +96,7 @@ CLI USAGE
 COPYRIGHT
 ---------
 
-Copyright © 2015-2018, Chris Warrick.
+Copyright © 2015-2019, Chris Warrick.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

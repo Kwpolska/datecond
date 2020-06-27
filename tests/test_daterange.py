@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # datecond test suite
-# Copyright © 2016-2018, Chris Warrick.
+# Copyright © 2016-2020, Chris Warrick.
 # See /LICENSE for licensing information.
 
-
 from datecond import date_in_range
-from datetime import datetime
+from datetime import date, datetime, timedelta
+from freezegun import freeze_time
 
 def test_single_cond_eq():
     pattern = "year == 2016"
@@ -69,7 +69,37 @@ def test_weekday_isoweekday():
     assert not date_in_range(pattern, datetime(2016, 7, 11))
 
 
-def test_now():
+def test_now_lt():
     pattern = "< now"
     assert date_in_range(pattern, datetime(2016, 7, 13), now=datetime(2016, 7, 14))
     assert not date_in_range(pattern, datetime(2016, 7, 14), now=datetime(2016, 7, 14))
+
+
+def test_now_today():
+    pattern = "== now"
+    assert date_in_range(pattern, datetime(2016, 7, 13), now=datetime(2016, 7, 13))
+    assert not date_in_range(pattern, datetime(2016, 7, 13, 1), now=datetime(2016, 7, 13))
+    assert not date_in_range(pattern, datetime(2016, 7, 14), now=datetime(2016, 7, 13))
+    pattern = "== today"
+    assert date_in_range(pattern, datetime(2016, 7, 13), now=datetime(2016, 7, 13))
+    assert date_in_range(pattern, datetime(2016, 7, 13, 1), now=datetime(2016, 7, 13))
+    assert not date_in_range(pattern, datetime(2016, 7, 14), now=datetime(2016, 7, 13))
+
+
+def test_today_date_datetime():
+    pattern = "== today"
+    assert date_in_range(pattern, date(2016, 7, 13), now=date(2016, 7, 13))
+    assert not date_in_range(pattern, date(2016, 7, 14), now=date(2016, 7, 13))
+    assert date_in_range(pattern, date(2016, 7, 13), now=datetime(2016, 7, 13))
+    assert not date_in_range(pattern, date(2016, 7, 14), now=datetime(2016, 7, 13))
+    assert date_in_range(pattern, datetime(2016, 7, 13), now=date(2016, 7, 13))
+    assert not date_in_range(pattern, datetime(2016, 7, 14), now=date(2016, 7, 13))
+
+
+@freeze_time("2016-07-13")
+def test_today_no_now():
+    pattern = "== today"
+    assert date_in_range(pattern, date(2016, 7, 13))
+    assert not date_in_range(pattern, date(2016, 7, 14))
+    assert date_in_range(pattern, datetime(2016, 7, 13))
+    assert not date_in_range(pattern, datetime(2016, 7, 14))
