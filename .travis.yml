@@ -9,11 +9,12 @@ python:
  - "pypy"
 
 install:
- - "pip install -r requirements.txt"
+ - "pip install -U --update-strategy=eager pip setuptools wheel"
+ - "pip install -U --update-strategy=eager -r requirements.txt"
  - "pip install ."
 
 script:
-  - "py.test --cov datecond --cov-report term-missing tests/"
+  - "pytest --cov datecond --cov-report term-missing tests/"
 
 notifications:
   email:
