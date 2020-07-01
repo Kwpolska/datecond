@@ -4,8 +4,8 @@ Date Conditionals (datecond)
 :Info: This is the README file for Date Conditionals.
 :Author: Chris Warrick <chris@chriswarrick.com>
 :Copyright: © 2016-2018, Chris Warrick.
-:Date: 2017-03-07
-:Version: 0.1.6
+:Date: 2020-07-01
+:Version: 0.1.7
 
 .. index: README
 .. image:: https://travis-ci.org/Kwpolska/datecond.svg?branch=master

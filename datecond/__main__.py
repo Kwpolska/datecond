@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Date Conditionals v0.1.6
+# Date Conditionals v0.1.7
 # Copyright © 2015-2018, Chris Warrick.
 # All rights reserved.
 #
