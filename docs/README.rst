@@ -3,7 +3,7 @@ Date Conditionals (datecond)
 ============================
 :Info: This is the README file for Date Conditionals.
 :Author: Chris Warrick <chris@chriswarrick.com>
-:Copyright: © 2016-2018, Chris Warrick.
+:Copyright: © 2016-2020, Chris Warrick.
 :Date: 2020-07-01
 :Version: 0.1.7
 
