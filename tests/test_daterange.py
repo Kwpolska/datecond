@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # datecond test suite
-# Copyright © 2016-2020, Chris Warrick.
+# Copyright © 2016-2021, Chris Warrick.
 # See /LICENSE for licensing information.
 
 from datecond import date_in_range

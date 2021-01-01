@@ -3,7 +3,7 @@ Appendix C. Changelog
 =====================
 :Info: This is the changelog for Date Conditionals.
 :Author: Chris Warrick <chris@chriswarrick.com>
-:Copyright: © 2016-2020, Chris Warrick.
+:Copyright: © 2016-2021, Chris Warrick.
 :License: BSD (see /LICENSE or :doc:`Appendix B <LICENSE>`.)
 :Date: 2020-07-01
 :Version: 0.1.7
